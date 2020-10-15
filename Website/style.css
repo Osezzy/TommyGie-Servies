@@ -1,8 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Raleway:wght@400;700&display=swap');
+
+/* Root styles */
+
 :root {
     --dominant: ;
     --accent: ;
+    --text-blue: #005BFF;
 }
+
+
+/* Root styles end */
+
+
+/* Reset styles */
 
 * {
     margin: 0;
@@ -13,64 +23,217 @@
 body {
     background-color: rgb(250, 250, 250);
     font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
 }
 
-#container {
+
+/* Reset styles end */
+
+
+/* Reusable styles */
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo img {
+    width: 8rem;
+}
+
+.article,
+section {
     width: 90%;
-    margin: 0 auto;
+    margin: auto;
 }
 
 
-/* Navigation */
+/* .tab img {
+    width: 30rem;
+} */
+
+
+/* Reusable styles end */
+
+
+/* Nav styles */
+
+.burger {
+    display: none;
+}
 
 nav {
+    width: 90%;
+    height: 10vh;
+    margin: auto;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
-nav .logo img {
-    width: 200px;
-    margin-top: -30px;
-    cursor: pointer;
+#nav-links {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-nav #nav-links {
+#nav-links li a {
+    color: var(--text-blue);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* Nav styles end */
+
+
+/* Header Styles */
+
+#banner {
+    width: 100%;
+    height: 80vh;
+    background-color: #333;
+    padding: 5rem;
+    text-align: left;
+}
+
+#banner *+* {
+    margin-top: 1.4rem;
+}
+
+#welcome {
+    width: 50%;
+    margin: 0;
+}
+
+#banner h1 {
+    font-size: 2rem;
+    line-height: 1.4em;
+    color: #fff;
+}
+
+#banner p {
+    font-weight: 500;
+    color: #fff;
+}
+
+#banner .btns a {
+    display: inline-block;
+    background-color: #FF000D;
+    padding: .8rem 1rem;
+    margin-right: .6rem;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Header styles end */
+
+.article {
+    width: 70%;
+    margin: 1.5rem;
+}
+
+.article h2 {
+    margin-bottom: 1rem;
+    color: var(--text-blue);
+}
+
+
+/* Section styles */
+
+.what-we-do>* {
+    margin-top: 7rem;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.items img {
+    width: 50%;
+    margin-left: 2rem;
+}
+
+.items .item {
+    width: 40%;
+}
+
+.item-3 img {
+    background-color: #555;
+    width: 40%;
+    height: 22vh;
+}
+
+.item h2 {
+    color: var(--text-blue);
+    margin-bottom: 1rem;
+}
+
+
+/* Section #services styles end */
+
+
+/* Section #tabs start */
+
+#tabs {
+    width: 100%;
+    margin-top: 15rem;
+    background-color: #FF363B;
+    color: #fff;
+    padding: 2rem;
+}
+
+#tabs h1 {
+    margin-bottom: 1rem;
+}
+
+
+/* .tab-list {
+    margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
+} */
+
+.tab-list {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+}
+
+.list-item {
     width: 100%;
-    list-style-type: none;
-    padding: 10px;
-    margin-top: -30px;
-}
-
-nav #nav-links li a {
-    text-decoration: none;
-    font-size: 1em;
-    letter-spacing: 1px;
-    color: rgb(25, 21, 255);
-    font-weight: 600;
-    opacity: 0.6;
-}
-
-nav #nav-links li a:hover {
-    opacity: 1;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 80%;
-    margin: 0 auto;
-}
-
-header #welcome {
     text-align: center;
 }
 
-header #welcome h2 {
-    margin-bottom: 20px;
-    font-size: 2em;
+.list-item img {
+    display: inline-block;
+    width: 70px;
+    max-width: 100px;
+    margin-bottom: 1rem;
 }
+
+.list-item *+* {
+    margin-bottom: 1rem;
+}
+
+.list-item p {
+    width: 17vw;
+    margin: 0 auto;
+}
+
+.border {
+    border-right: 1px solid rgb(201, 201, 201);
+}
+
+
+/* Section #tabs end */
